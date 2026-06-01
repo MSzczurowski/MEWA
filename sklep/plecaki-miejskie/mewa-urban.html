@@ -20,7 +20,7 @@
         <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
         <nav id="main-nav" class="main-nav" aria-label="Nawigacja glowna">
           <a href="../../index.html">Start</a>
-          <a href="../index.html" aria-current="page">Sklep</a>
+          <a href="../../sklep/index.html" aria-current="page">Sklep</a>
           <a href="../../produkty/index.html">Produkty</a>
           <a href="../../o-nas/index.html">O nas</a>
           <a href="../../misja/index.html">Misja</a>
@@ -32,15 +32,25 @@
         </nav>
       </div>
     </header>
-    <main class="section">
-      <div class="container product-layout">
+    <main>
+      <section class="hero compact">
+        <div class="container">
+          <p class="eyebrow">/sklep/plecaki-miejskie/mewa-urban</p>
+          <h1>MEWA Urban</h1>
+          <p class="lead page-copy">Plecak na laptopa z Econyl i rPET, projektowany do codziennego miasta, pracy i studiow. Zaprojektowany z mysla o trwałosci, wygodzie i cyklicznym obiegu materialu.</p>
+          <div class="page-cta-row">
+            <a class="btn btn-primary" href="#mewa-loop">Poznaj MEWA Loop</a>
+            <a class="btn btn-ghost" href="../index.html">Wroc do kategorii</a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container product-layout">
         <figure class="product-gallery">
           <img src="../../Dokumenty Opisowe/mewa-plecak-student-laptop.png" alt="MEWA Urban - plecak na laptopa z recyklingu" />
           <figcaption>Zdjecie produktowe zgodne z wytycznymi: minimalistyczna forma, ciemny oceaniczny odcien, piaskowe detale i podkreslona faktura materialu.</figcaption>
         </figure>
         <section class="product-info">
-          <p class="eyebrow">/sklep/plecaki-miejskie/mewa-urban</p>
-          <h1>MEWA Urban</h1>
           <p class="price big">529 PLN</p>
           <p>MEWA Urban to plecak na laptopa z recyclingu zaprojektowany dla studentow i osob pracujacych. Material bazowy to Econyl z odzyskanych sieci rybackich oraz przedza rPET, dzieki czemu produkt laczy trwalosc z niskim sladem srodowiskowym.</p>
           <ul class="spec-list">
@@ -54,12 +64,27 @@
             <h2>MEWA Loop</h2>
             <p>Kiedy plecak zakonczy cykl uzytkowania, mozesz odeslac go do MEWA. Material zostanie ponownie przetworzony, a Ty otrzymasz znizke na kolejny produkt.</p>
           </div>
-          <button class="btn btn-primary" type="button" disabled>Dodaj do koszyka (demo)</button>
+          <button
+            class="btn btn-primary js-add-to-cart"
+            type="button"
+            data-product-name="MEWA Urban"
+            data-product-price="529"
+            data-product-image="../../Dokumenty Opisowe/mewa-plecak-student-laptop.png"
+          >
+            Dodaj do koszyka
+          </button>
           <p class="small-note">To prototyp front-endu. Przycisk zakupowy nie uruchamia platnosci.</p>
         </section>
-      </div>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-grid"><p>MEWA Urban | plecak studencki z recyclingu</p><p>Frazy: plecak laptop, plecak vegan style, plecak z sieci rybackich</p></div></footer>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><h3>MEWA Urban</h3><p>Plecak studencki z recyclingu i programem MEWA Loop.</p></div>
+        <div><h3>Zakladki</h3><div class="footer-links"><a href="../index.html">Sklep</a><a href="../../produkty/index.html">Produkty</a></div></div>
+        <div><h3>Wsparcie</h3><div class="footer-links"><a href="../../kontakt/index.html">Kontakt</a><a href="../../faq/index.html">FAQ</a></div></div>
+      </div>
+    </footer>
     <script src="../../scripts/main.js"></script>
   </body>
 </html>
