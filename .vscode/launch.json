@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "MEWA: Home (Chrome)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5500/index.html",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "name": "MEWA: Sklep (Chrome)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5500/sklep/plecaki-miejskie.html",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "name": "MEWA: Produkt Urban (Chrome)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5500/produkt/mewa-urban.html",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "name": "MEWA: Misja (Chrome)",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5500/misja/o-nas.html",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "skipFiles": ["<node_internals>/**"]
+        },
+        {
+            "name": "MEWA: Attach do Chrome (9222)",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
