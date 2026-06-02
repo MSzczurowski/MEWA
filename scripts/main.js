@@ -692,7 +692,7 @@ const initRecommendations = () => {
               .map(
                 (item) => `
               <a class="recent-item" href="${toPageRelativePath(item.link)}">
-                <img src="${toPageRelativePath(item.image)}" alt="${item.name}" />
+                <img src="${toPageRelativePath(item.image)}" alt="${item.name}" ../../>
                 <div>
                   <strong>${item.name}</strong>
                   <p>${formatPrice(item.price)}</p>
