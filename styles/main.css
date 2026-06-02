@@ -244,6 +244,24 @@ h3 {
   border: 1px solid var(--line);
 }
 
+.btn-product {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: var(--brand-sea);
+  border: 1px solid rgb(26, 140, 140);
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.5rem 0.78rem;
+  text-decoration: none;
+}
+
+.btn-product:hover {
+  background: rgba(26, 140, 140, 0.08);
+  border-color: var(--brand-sea);
+}
+
 .btn[disabled] {
   opacity: 0.65;
   cursor: not-allowed;
@@ -292,6 +310,8 @@ h3 {
 
 .section-pad-small {
   padding: 1.1rem 0 0.4rem;
+  width: min(1120px, calc(100% - 6rem));
+  margin: 0 auto;
 }
 
 .split {
@@ -331,7 +351,7 @@ h3 {
 .product-grid {
   display: grid;
   gap: 1rem;
-  margin-top: 0.8rem;
+  width: 100%;
 }
 
 .three-col {
@@ -348,14 +368,22 @@ h3 {
 
 .product-card {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .product-card > * + * {
   margin-top: 0.6rem;
 }
 
+.product-card .btn-product {
+  margin-top: auto;
+}
+
 .thumb {
   width: 100%;
+  margin-inline: auto;
   aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 12px;
