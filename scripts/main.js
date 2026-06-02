@@ -597,13 +597,18 @@ const toPageRelativePath = (path) => {
   }
 
   const cleanPath = String(path).replace(/^\/+/, "");
-  const cleanCurrentPath = String(currentPath).replace(/^\/+|\/+$/g, "");
-  const segments = cleanCurrentPath.split("/").filter(Boolean);
   
-  const isFile = segments.length > 0 && segments[segments.length - 1].includes(".");
-  const folderDepth = isFile ? segments.length - 1 : segments.length;
-  const depth = Math.max(folderDepth - 1, 0);
-  
+  let urlPath = String(currentPath);
+  if (urlPath.startsWith("http")) {
+    urlPath = new URL(urlPath).pathname;
+  }
+
+  const segments = urlPath.split("/").filter(Boolean);
+  if (segments.length > 0 && segments[segments.length - 1].includes(".")) {
+    segments.pop();
+  }
+
+  const depth = Math.max(segments.length - 1, 0);
   const prefix = "../".repeat(depth);
   return `${prefix}${cleanPath}`;
 };
