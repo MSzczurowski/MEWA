@@ -597,8 +597,13 @@ const toPageRelativePath = (path) => {
   }
 
   const cleanPath = String(path).replace(/^\/+/, "");
-  const segments = currentPath.split("/").filter(Boolean);
-  const depth = Math.max(segments.length - 1, 0);
+  const cleanCurrentPath = String(currentPath).replace(/^\/+|\/+$/g, "");
+  const segments = cleanCurrentPath.split("/").filter(Boolean);
+  
+  const isFile = segments.length > 0 && segments[segments.length - 1].includes(".");
+  const folderDepth = isFile ? segments.length - 1 : segments.length;
+  const depth = Math.max(folderDepth - 1, 0);
+  
   const prefix = "../".repeat(depth);
   return `${prefix}${cleanPath}`;
 };
@@ -692,7 +697,7 @@ const initRecommendations = () => {
               .map(
                 (item) => `
               <a class="recent-item" href="${toPageRelativePath(item.link)}">
-                <img src="${toPageRelativePath(item.image)}" alt="${item.name}" ../../>
+                <img src="${toPageRelativePath(item.image)}" alt="${item.name}" />
                 <div>
                   <strong>${item.name}</strong>
                   <p>${formatPrice(item.price)}</p>
